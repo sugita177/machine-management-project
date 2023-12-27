@@ -2,7 +2,7 @@
     <x-slot name="header">
         <div class="container mx-auto flex justify-between">
             <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-                在庫管理システム
+                建設機械管理システム
             </h2>
 
             @include('components.auth-navigation')
