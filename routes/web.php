@@ -3,6 +3,9 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\MachineController;
+use App\Http\Controllers\ManufacturerController;
+
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\CheckController;
 use App\Http\Controllers\InventoryController;
@@ -32,6 +35,9 @@ Route::get('/', function() {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('machine/index', [MachineController::class, 'index'])
+->name('machine.index');
 
 Route::get('article/create', [ArticleController::class, 'create'])
 ->name('article.create');
