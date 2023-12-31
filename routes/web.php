@@ -39,6 +39,15 @@ Route::get('/dashboard', function () {
 Route::get('machine/index', [MachineController::class, 'index'])
 ->name('machine.index');
 
+Route::get('machine/create', [MachineController::class, 'create'])
+->name('machine.create');
+
+Route::post('article', [MachineController::class, 'store'])
+->name('machine.store');
+
+Route::get('machine/show/{machine}', [MachineController::class, 'show'])
+->name('machine.show');
+
 Route::get('article/create', [ArticleController::class, 'create'])
 ->name('article.create');
 

@@ -1,1 +1,0 @@
-const r=document.querySelector("tbody").querySelectorAll("tr");r.forEach(function(e){const t=e.querySelector('input[type="checkbox"]').id,o=e.querySelectorAll('input[type="number"]'),c=document.getElementById(`${t}`);c.addEventListener("change",()=>{o.forEach(function(n){n.readonly=c.checked})})});

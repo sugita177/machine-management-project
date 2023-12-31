@@ -20,11 +20,14 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call(UserSeeder::class);
-        $this->call(CategorySeeder::class);
-        $this->call(PlaceSeeder::class);
-        $this->call(SupplierSeeder::class);
-        $this->call(ArticleSeeder::class);
-        $this->call(CheckSeeder::class);
-        $this->call(InventorySeeder::class);
+        $this->call(ManufacturerSeeder::class);
+        $this->call(MachineSeeder::class);
+
+        //$this->call(CategorySeeder::class);
+        //$this->call(PlaceSeeder::class);
+        //$this->call(SupplierSeeder::class);
+        //$this->call(ArticleSeeder::class);
+        //$this->call(CheckSeeder::class);
+        //$this->call(InventorySeeder::class);
     }
 }

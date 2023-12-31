@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>建設機械管理システム</title>
+        <title>在庫管理システム</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -23,7 +23,7 @@
     
     
         <div class="flex items-center justify-between">
-            <a class="flex-none text-xl font-semibold dark:text-white" href="#" aria-label="Brand">建設機械管理システム</a>
+            <a class="flex-none text-xl font-semibold dark:text-white" href="#" aria-label="Brand">在庫管理システム</a>
             
         </div>
       <div id="navbar-collapse-with-animation" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
@@ -54,7 +54,7 @@
       <header class="max-w-3xl">
         @if(Route::has('login'))
           @auth
-          <a href="{{ route('article.index') }}">
+          <a href="{{ route('machine.index') }}">
               <p class="mb-2 text-sm font-semibold text-blue-600">システムを使用する</p>
           </a>
           @else
