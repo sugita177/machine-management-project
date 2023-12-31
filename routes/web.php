@@ -42,11 +42,20 @@ Route::get('machine/index', [MachineController::class, 'index'])
 Route::get('machine/create', [MachineController::class, 'create'])
 ->name('machine.create');
 
-Route::post('article', [MachineController::class, 'store'])
+Route::post('machine', [MachineController::class, 'store'])
 ->name('machine.store');
 
 Route::get('machine/show/{machine}', [MachineController::class, 'show'])
 ->name('machine.show');
+
+Route::get('machine/edit/{machine}', [MachineController::class, 'edit'])
+->name('machine.edit');
+
+Route::patch('machine/{machine}', [MachineController::class, 'update'])
+->name('machine.update');
+
+Route::delete('machine/{machine}', [MachineController::class, 'destroy'])
+->name('machine.destroy');
 
 Route::get('article/create', [ArticleController::class, 'create'])
 ->name('article.create');
