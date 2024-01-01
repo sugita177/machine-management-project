@@ -12,4 +12,8 @@ class Manufacturer extends Model
     protected $guarded = [
         'id',
     ];
+
+    public function machine() {
+        return $this->hasMany(Machine::class);
+    }
 }

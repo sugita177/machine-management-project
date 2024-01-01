@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('sites', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('adress')->nullable();
+            $table->string('address')->nullable();
             $table->foreignId('client_id');
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();
@@ -63,6 +63,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('adress')->nullable();
+            $table->string('remark')->nullable();
             $table->timestamps();
         });
 

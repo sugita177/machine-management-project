@@ -26,8 +26,6 @@ class MachineController extends Controller
             'remark' => 'max:400'
         ]);
 
-        $validated['user_id'] = auth()->id();
-
         $machine = Machine::create($validated);
         $request->session()->flash('message', '保存しました');
         return back();
