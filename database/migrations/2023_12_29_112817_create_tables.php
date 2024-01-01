@@ -15,12 +15,14 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('adress')->nullable();
-            $table->foreignId('company_id');
+            $table->foreignId('client_id');
+            $table->date('start_date')->nullable();
+            $table->date('end_date')->nullable();
             $table->text('remark')->nullable();
             $table->timestamps();
         });
 
-        Schema::create('companies', function (Blueprint $table) {
+        Schema::create('clients', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->text('remark')->nullable();
@@ -72,7 +74,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('sites');
-        Schema::dropIfExists('companies');
+        Schema::dropIfExists('clients');
         Schema::dropIfExists('memos');
         Schema::dropIfExists('histories');
         Schema::dropIfExists('states');
