@@ -38,8 +38,7 @@ class SiteController extends Controller
     }
 
     public function edit(Site $site) {
-        $clients = Client::all();
-        return view('site.edit', compact('site', 'clients'));
+        return view('site.edit', compact('site'));
     }
 
     public function update(Request $request, Site $site) {

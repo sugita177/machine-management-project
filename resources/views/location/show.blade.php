@@ -1,4 +1,4 @@
-<x-layouts.inventory-manager>
+<x-layouts.machine-manager>
 
   <div class="max-w-[60rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
   <!-- Card -->
@@ -10,21 +10,20 @@
           <div class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200 dark:border-gray-700">
             <div>
               <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200">
-                {{ $place->name }}
+                {{ $location->name }}
               </h2>
               <p class="text-sm text-gray-600 dark:text-gray-400">
                 保管場所の詳細
               </p>
             </div>
 
-            <div>
-              <div class="inline-flex gap-x-2">
-                <a href="{{ route('place.index') }}">
+            
+            <div class="inline-flex gap-x-2">
+                <a href="{{ route('location.index') }}">
                     <button type="button" class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800">
                     一覧画面へ
                     </button>
                 </a>
-              </div>
             </div>
           </div>
           <!-- End Header -->
@@ -53,12 +52,25 @@
                 <tr>
                     <td class="h-px w-auto whitespace-nowrap">
                         <div class="px-6 py-2">
-                            <span class="font-semibold text-sm text-gray-800 dark:text-gray-200">保管場所名</span>
+                            <span class="font-semibold text-sm text-gray-800 dark:text-gray-200">保管場所</span>
                         </div>
                     </td>
                     <td class="h-px w-auto whitespace-nowrap">
                         <div class="px-6 py-2">
-                            <span class="font-semibold text-sm text-gray-800 dark:text-gray-200">{{ $place->name }}</span>
+                            <span class="font-semibold text-sm text-gray-800 dark:text-gray-200">{{ $location->name }}</span>
+                        </div>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="h-px w-auto whitespace-nowrap">
+                        <div class="px-6 py-2">
+                            <span class="font-semibold text-sm text-gray-800 dark:text-gray-200">住所</span>
+                        </div>
+                    </td>
+                    <td class="h-px w-auto whitespace-nowrap">
+                        <div class="px-6 py-2">
+                            <span class="font-semibold text-sm text-gray-800 dark:text-gray-200">{{ $location->address }}</span>
                         </div>
                     </td>
                 </tr>
@@ -66,12 +78,12 @@
                 <tr>
                     <td class="h-px w-auto whitespace-nowrap">
                         <div class="px-6 py-2">
-                            <span class="font-semibold text-sm text-gray-800 dark:text-gray-200">詳細</span>
+                            <span class="font-semibold text-sm text-gray-800 dark:text-gray-200">備考</span>
                         </div>
                     </td>
                     <td class="h-px w-auto whitespace-nowrap">
                         <div class="px-6 py-2">
-                            <span class="font-semibold text-sm text-gray-800 dark:text-gray-200">{{ $place->detail }}</span>
+                            <span class="font-semibold text-sm text-gray-800 dark:text-gray-200">{{ $location->remark }}</span>
                         </div>
                     </td>
                 </tr>
@@ -84,7 +96,7 @@
                     </td>
                     <td class="h-px w-auto whitespace-nowrap">
                         <div class="px-6 py-2">
-                            <span class="font-semibold text-sm text-gray-800 dark:text-gray-200">{{ $place->created_at }}</span>
+                            <span class="font-semibold text-sm text-gray-800 dark:text-gray-200">{{ $location->created_at }}</span>
                         </div>
                     </td>
                 </tr>
@@ -97,11 +109,11 @@
           <!-- Footer -->
           <div class="px-6 py-4 grid gap-3 md:flex flex-row-reverse md:justify-between md:items-center border-t border-gray-200 dark:border-gray-700">
             <div class="mt-1 grid sm:flex gap-2 ">
-                <a href="{{route('place.edit', $place)}}" >
+                <a href="{{route('location.edit', $location)}}" >
                 <x-primary-button class="inline-flex justify-center items-center">編集</x-primary-button>
                 </a>
 
-                <form id="deleteForm" method="post" action="{{route('place.destroy', $place)}}" >
+                <form id="deleteForm" method="post" action="{{route('location.destroy', $location)}}" >
                     @csrf
                     @method('delete')
                     <x-primary-button class="bg-red-700 ml-2 inline-flex justify-center items-center">削除</x-primary-button>

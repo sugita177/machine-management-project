@@ -23,7 +23,7 @@
           <a class="inline-flex items-center gap-x-2 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500" href="{{route('manufacturer.index')}}">メーカー</a>
         </div>
         <div class="snap-center shrink-0 pr-5 sm:pr-8 sm:last:pr-0">
-          <a class="inline-flex items-center gap-x-2 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500" href="{{route('site.index')}}">現場</a>
+          <a class="inline-flex items-center gap-x-2 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500" href="{{route('site.index')}}">搬出先</a>
         </div>
         <div class="snap-center shrink-0 pr-5 sm:pr-8 sm:last:pr-0">
           <a class="inline-flex items-center gap-x-2 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500" href="{{route('client.index')}}">受注先</a>
@@ -32,7 +32,7 @@
           <a class="inline-flex items-center gap-x-2 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500" href="{{route('state.index')}}">ステータス</a>
         </div>
         <div class="snap-center shrink-0 pr-5 sm:pr-8 sm:last:pr-0">
-          <a class="inline-flex items-center gap-x-2 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500" href="{{route('location.index')}}">場所</a>
+          <a class="inline-flex items-center gap-x-2 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500" href="{{route('location.index')}}">保管場所</a>
         </div>
       </div>
     </nav>

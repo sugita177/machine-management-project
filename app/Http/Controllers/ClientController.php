@@ -33,8 +33,7 @@ class ClientController extends Controller
     }
 
     public function edit(Client $client) {
-        $manufacturers = Manufacturer::all();
-        return view('client.edit', compact('client', 'manufacturers'));
+        return view('client.edit', compact('client'));
     }
 
     public function update(Request $request, Client $client) {
