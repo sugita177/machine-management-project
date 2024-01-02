@@ -55,14 +55,14 @@ return new class extends Migration
         Schema::create('states', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('detail');
+            $table->string('remark')->nullable();
             $table->timestamps();
         });
 
         Schema::create('locations', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('adress')->nullable();
+            $table->string('address')->nullable();
             $table->string('remark')->nullable();
             $table->timestamps();
         });

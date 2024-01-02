@@ -10,7 +10,6 @@ class SiteController extends Controller
 {
     public function index() {
         $sites = Site::all();
-        //dd($sites);
         return view('site.index', compact('sites'));
     }
 
