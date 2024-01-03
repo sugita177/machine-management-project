@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Site;
+use App\Models\Client;
 
 class SiteController extends Controller
 {
@@ -38,7 +39,8 @@ class SiteController extends Controller
     }
 
     public function edit(Site $site) {
-        return view('site.edit', compact('site'));
+        $clients = Client::all();
+        return view('site.edit', compact('site', 'clients'));
     }
 
     public function update(Request $request, Site $site) {

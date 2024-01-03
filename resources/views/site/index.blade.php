@@ -49,19 +49,19 @@
               <tr>
                 <th scope="col" class="px-6 py-3 text-left border-l border-gray-200 dark:border-gray-700">
                   <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200">
-                    現場名
+                    搬出先現場名
                   </span>
                 </th>
 
                 <th scope="col" class="px-6 py-3 text-left">
                   <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200">
-                    住所
+                    所在地
                   </span>
                 </th>
 
                 <th scope="col" class="px-6 py-3 text-left">
                   <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200">
-                    受注先
+                    搬出先会社名
                   </span>
                 </th>
 
@@ -74,6 +74,12 @@
                 <th scope="col" class="px-6 py-3 text-left">
                   <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200">
                     終了日
+                  </span>
+                </th>
+
+                <th scope="col" class="px-6 py-3 text-left">
+                  <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200">
+                    備考
                   </span>
                 </th>
 
@@ -115,6 +121,11 @@
                     <td class="h-px w-auto whitespace-nowrap">
                         <div class="px-6 py-2">
                             <span class="font-semibold text-sm text-gray-800 dark:text-gray-200">{{ $site->end_date }}</span>
+                        </div>
+                    </td>
+                    <td class="h-px w-auto whitespace-nowrap">
+                        <div class="px-6 py-2">
+                            <span class="font-semibold text-sm text-gray-800 dark:text-gray-200">{{ $site->remark }}</span>
                         </div>
                     </td>
                     <td class="h-px w-auto whitespace-nowrap">

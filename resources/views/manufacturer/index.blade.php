@@ -11,10 +11,10 @@
           <div class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200 dark:border-gray-700">
             <div>
               <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200">
-                受注先一覧
+                メーカーの一覧
               </h2>
               <p class="text-sm text-gray-600 dark:text-gray-400">
-                建設機械の受注先一覧
+                建設機械メーカーの一覧
               </p>
             </div>
 
