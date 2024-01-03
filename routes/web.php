@@ -167,6 +167,54 @@ Route::patch('location/{location}', [LocationController::class, 'update'])
 Route::delete('location/{location}', [LocationController::class, 'destroy'])
 ->name('location.destroy');
 
+Route::get('history/index', [LocationController::class, 'index'])
+->name('history.index');
+
+Route::get('history/index_latest', [LocationController::class, 'index_latest'])
+->name('history.index_latest');
+
+Route::get('history/index_one_machine/{machine}', [LocationController::class, 'index_one_machine'])
+->name('history.index_one_machine');
+
+Route::get('history/create', [LocationController::class, 'create'])
+->name('history.create');
+
+Route::post('history', [LocationController::class, 'store'])
+->name('history.store');
+
+Route::get('history/show/{history}', [LocationController::class, 'show'])
+->name('history.show');
+
+Route::get('history/edit/{history}', [LocationController::class, 'edit'])
+->name('history.edit');
+
+Route::patch('history/{history}', [LocationController::class, 'update'])
+->name('history.update');
+
+Route::delete('history/{history}', [LocationController::class, 'destroy'])
+->name('history.destroy');
+
+Route::get('memo/index', [LocationController::class, 'index'])
+->name('memo.index');
+
+Route::get('memo/create', [LocationController::class, 'create'])
+->name('memo.create');
+
+Route::post('memo', [LocationController::class, 'store'])
+->name('memo.store');
+
+Route::get('memo/show/{memo}', [LocationController::class, 'show'])
+->name('memo.show');
+
+Route::get('memo/edit/{memo}', [LocationController::class, 'edit'])
+->name('memo.edit');
+
+Route::patch('memo/{memo}', [LocationController::class, 'update'])
+->name('memo.update');
+
+Route::delete('memo/{memo}', [LocationController::class, 'destroy'])
+->name('memo.destroy');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

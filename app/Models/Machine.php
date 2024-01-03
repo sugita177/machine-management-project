@@ -16,4 +16,12 @@ class Machine extends Model
     public function manufacturer() {
         return $this->belongsTo(Manufacturer::class);
     }
+
+    public function histories() {
+        return $this->hasMany(History::class);
+    }
+
+    public function memos() {
+        return $this->hasMany(Memo::class);
+    }
 }
