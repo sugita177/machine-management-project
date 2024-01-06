@@ -9,14 +9,9 @@ use App\Http\Controllers\SiteController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\StateController;
 use App\Http\Controllers\LocationController;
-
-
-use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\CheckController;
-use App\Http\Controllers\InventoryController;
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\PlaceController;
-use App\Http\Controllers\SupplierController;
+use App\Http\Controllers\HistoryController;
+use App\Http\Controllers\MemoController;
+use App\Http\Controllers\SituationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -167,53 +162,74 @@ Route::patch('location/{location}', [LocationController::class, 'update'])
 Route::delete('location/{location}', [LocationController::class, 'destroy'])
 ->name('location.destroy');
 
-Route::get('history/index', [LocationController::class, 'index'])
+Route::get('history/index', [HistoryController::class, 'index'])
 ->name('history.index');
 
-Route::get('history/index_latest', [LocationController::class, 'index_latest'])
-->name('history.index_latest');
+//Route::get('history/index_latest', [HistoryController::class, 'index_latest'])
+//->name('history.index_latest');
 
-Route::get('history/index_one_machine/{machine}', [LocationController::class, 'index_one_machine'])
+Route::get('history/index_one_machine/{machine}', [HistoryController::class, 'index_one_machine'])
 ->name('history.index_one_machine');
 
-Route::get('history/create', [LocationController::class, 'create'])
+Route::get('history/create', [HistoryController::class, 'create'])
 ->name('history.create');
 
-Route::post('history', [LocationController::class, 'store'])
+Route::post('history', [HistoryController::class, 'store'])
 ->name('history.store');
 
-Route::get('history/show/{history}', [LocationController::class, 'show'])
+Route::get('history/show/{history}', [HistoryController::class, 'show'])
 ->name('history.show');
 
-Route::get('history/edit/{history}', [LocationController::class, 'edit'])
+Route::get('history/edit/{history}', [HistoryController::class, 'edit'])
 ->name('history.edit');
 
-Route::patch('history/{history}', [LocationController::class, 'update'])
+Route::patch('history/{history}', [HistoryController::class, 'update'])
 ->name('history.update');
 
-Route::delete('history/{history}', [LocationController::class, 'destroy'])
+Route::delete('history/{history}', [HistoryController::class, 'destroy'])
 ->name('history.destroy');
 
-Route::get('memo/index', [LocationController::class, 'index'])
+Route::get('memo/index', [MemoController::class, 'index'])
 ->name('memo.index');
 
-Route::get('memo/create', [LocationController::class, 'create'])
+Route::get('memo/create', [MemoController::class, 'create'])
 ->name('memo.create');
 
-Route::post('memo', [LocationController::class, 'store'])
+Route::post('memo', [MemoController::class, 'store'])
 ->name('memo.store');
 
-Route::get('memo/show/{memo}', [LocationController::class, 'show'])
+Route::get('memo/show/{memo}', [MemoController::class, 'show'])
 ->name('memo.show');
 
-Route::get('memo/edit/{memo}', [LocationController::class, 'edit'])
+Route::get('memo/edit/{memo}', [MemoController::class, 'edit'])
 ->name('memo.edit');
 
-Route::patch('memo/{memo}', [LocationController::class, 'update'])
+Route::patch('memo/{memo}', [MemoController::class, 'update'])
 ->name('memo.update');
 
-Route::delete('memo/{memo}', [LocationController::class, 'destroy'])
+Route::delete('memo/{memo}', [MemoController::class, 'destroy'])
 ->name('memo.destroy');
+
+Route::get('situation/index', [SituationController::class, 'index'])
+->name('situation.index');
+
+Route::get('situation/create', [SituationController::class, 'create'])
+->name('situation.create');
+
+Route::post('situation', [SituationController::class, 'store'])
+->name('situation.store');
+
+Route::get('situation/show/{situation}', [SituationController::class, 'show'])
+->name('situation.show');
+
+Route::get('situation/edit/{situation}', [SituationController::class, 'edit'])
+->name('situation.edit');
+
+Route::patch('situation/{situation}', [SituationController::class, 'update'])
+->name('situation.update');
+
+Route::delete('situation/{situation}', [SituationController::class, 'destroy'])
+->name('situation.destroy');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class History extends Model
+class Situation extends Model
 {
     use HasFactory;
 
@@ -33,7 +33,7 @@ class History extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function situation() {
-        return $this->hasOne(Situation::class);
+    public function history() {
+        return $this->belongsTo(History::class);
     }
 }

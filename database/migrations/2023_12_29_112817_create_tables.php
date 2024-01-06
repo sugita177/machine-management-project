@@ -67,6 +67,21 @@ return new class extends Migration
             $table->timestamps();
         });
 
+        Schema::create('situations', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('machine_id');
+            $table->foreignId('state_id');
+            $table->foreignId('location_id');
+            $table->foreignId('site_id')->nullable();
+            $table->date('start_date');
+            $table->date('end_date')->nullable();
+            $table->string('stuff')->nullable();
+            $table->foreignId('user_id');
+            $table->text('remark')->nullable();
+            //$table->foreginId('history');
+            $table->timestamps();
+        });
+
     }
 
     /**
@@ -80,5 +95,6 @@ return new class extends Migration
         Schema::dropIfExists('histories');
         Schema::dropIfExists('states');
         Schema::dropIfExists('places');
+        Schema::dropIfExists('situations');
     }
 };

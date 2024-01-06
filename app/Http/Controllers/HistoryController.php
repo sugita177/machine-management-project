@@ -22,19 +22,19 @@ class HistoryController extends Controller
         return view('history.index', compact('histories'));
     }
 
-    public function index_latest() {
-        $machines = Machine::all();
-        $histories_latest = [];
-        foreach($machines as $machine) {
-            $history_latest = History::where('machine_id', $machine->id)
-                                        ->sortByDesc('start_date')
-                                        ->first();
-            if(isset($histories_latest)) {
-                $histories_latest[] = $history_latest;
-            }
-        }
-        return view('history.index', compact('histories_latest'));
-    }
+    //public function index_latest() {
+    //    $machines = Machine::all();
+    //    $histories_latest = [];
+    //    foreach($machines as $machine) {
+    //        $history_latest = History::where('machine_id', $machine->id)
+    //                                    ->sortByDesc('start_date')
+    //                                    ->first();
+    //        if(isset($histories_latest)) {
+    //            $histories_latest[] = $history_latest;
+    //        }
+    //    }
+    //    return view('history.index', compact('histories_latest'));
+    //}
 
     public function create() {
         $machines = Machine::all();
