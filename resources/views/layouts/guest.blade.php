@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>在庫管理システム</title>
+        <title>建設機械管理システム</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -22,7 +22,7 @@
                 </a>
                 <div class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200 dark:border-gray-700">
             <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-                在庫管理システム
+                建設機械管理システム
             </h2>
             <button class="bg-gray-400 hover:bg-gray-300 text-white rounded px-4 py-2" onClick="history.back()" >戻る</button>
         </div>

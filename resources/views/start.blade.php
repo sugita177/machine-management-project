@@ -59,7 +59,7 @@
           </a>
           @else
             <p class="mb-2 text-sm font-semibold text-gray-600 dark:text-gray-400">システムを使用するためには、画面右上の「Log in」よりログインをしてください
-              <br>「メールアドレス: test@example.com パスワード: 12345678」でログインできます
+              <br>「名前: テストユーザー パスワード: 12345678」でログインできます
             </p>
           @endauth
         @endif
