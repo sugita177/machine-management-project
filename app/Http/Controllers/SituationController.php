@@ -32,12 +32,14 @@ class SituationController extends Controller
             'machine_id' => 'required | integer',
             'state_id' => 'required | integer',
             'location_id' => 'required | integer',
-            'site_id' => 'integer',
             'start_date' => 'required | date',
-            'end_date' => 'date',
+            'end_date' => 'date | nullable',
             'stuff' => 'max:20',
             'remark' => 'max:400'
         ]);
+        if($request['site_id'] > 0) {
+            $validated['site_id'] = $request->validate(['site_id' => 'integer'])['site_id'];
+        }
 
         $validated['user_id'] = auth()->id();
 
@@ -63,12 +65,16 @@ class SituationController extends Controller
         $validated = $request->validate([
                 'state_id' => 'required | integer',
                 'location_id' => 'required | integer',
-                'site_id' => 'integer',
                 'start_date' => 'required | date',
-                'end_date' => 'date',
+                'end_date' => 'date | nullable',
                 'stuff' => 'max:20',
                 'remark' => 'max:400'
         ]);
+        if($request['site_id'] > 0) {
+            $validated['site_id'] = $request->validate(['site_id' => 'integer'])['site_id'];
+        } else {
+            $validated['site_id'] = null;
+        }
 
         $validated['user_id'] = auth()->id();
         

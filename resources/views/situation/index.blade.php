@@ -91,13 +91,13 @@
 
                 <th scope="col" class="px-6 py-3 text-left">
                   <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200">
-                    登録者
+                    更新者
                   </span>
                 </th>
 
                 <th scope="col" class="px-6 py-3 text-left">
                   <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200">
-                    登録日
+                    更新日
                   </span>
                 </th>
 
@@ -162,7 +162,7 @@
                     </td>
                     <td class="h-px w-auto whitespace-nowrap">
                         <div class="px-6 py-2">
-                            <span class="font-semibold text-sm text-gray-800 dark:text-gray-200">{{ $situation->created_at }}</span>
+                            <span class="font-semibold text-sm text-gray-800 dark:text-gray-200">{{ $situation->updated_at }}</span>
                         </div>
                     </td>
                     <td class="h-px w-auto whitespace-nowrap">

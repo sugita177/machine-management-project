@@ -88,8 +88,9 @@
                         </label>
                         <x-input-error :messages="$errors->get('site_id')" class="mt-2" />
                         <select id="site_id" name="site_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option value="-1">なし</option>
                         @foreach($sites as $site)
-                            @if($site->id == old('site_id', $situation->site->id))
+                            @if(isset($situation->site) && $site->id == old('site_id', $situation->site->id))
                                 <option selected="selected" value="{{ $site->id }}">{{ $site->name }}</option>
                             @else
                                 <option value="{{ $site->id }}">{{ $site->name }}</option>

@@ -7,7 +7,7 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/js/app.js',
-                'resources/js/cofirm_delete.js'
+                'resources/js/confirm_delete.js',
             ],
             refresh: true,
         }),

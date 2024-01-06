@@ -1,12 +1,17 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-dnW0yNCb.css",
+    "file": "assets/app-tGHiyctJ.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
   "resources/js/app.js": {
-    "file": "assets/app-aSlSSpbj.js",
+    "file": "assets/app-vZDQhnJA.js",
     "isEntry": true,
     "src": "resources/js/app.js"
+  },
+  "resources/js/confirm_delete.js": {
+    "file": "assets/confirm_delete-_WmL7jEV.js",
+    "isEntry": true,
+    "src": "resources/js/confirm_delete.js"
   }
 }

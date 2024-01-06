@@ -109,7 +109,11 @@
                     </td>
                     <td class="h-px w-auto whitespace-nowrap">
                         <div class="px-6 py-2">
-                            <span class="font-semibold text-sm text-gray-800 dark:text-gray-200">{{ $situation->site->name }}</span>
+                            <span class="font-semibold text-sm text-gray-800 dark:text-gray-200">
+                            @if(isset($situation->site))
+                                {{ $situation->site->name }}
+                            @endif
+                            </span>
                         </div>
                     </td>
                 </tr>
@@ -156,7 +160,7 @@
                 <tr>
                     <td class="h-px w-auto whitespace-nowrap">
                         <div class="px-6 py-2">
-                            <span class="font-semibold text-sm text-gray-800 dark:text-gray-200">登録者</span>
+                            <span class="font-semibold text-sm text-gray-800 dark:text-gray-200">更新者</span>
                         </div>
                     </td>
                     <td class="h-px w-auto whitespace-nowrap">
@@ -182,12 +186,12 @@
                 <tr>
                     <td class="h-px w-auto whitespace-nowrap">
                         <div class="px-6 py-2">
-                            <span class="font-semibold text-sm text-gray-800 dark:text-gray-200">登録日</span>
+                            <span class="font-semibold text-sm text-gray-800 dark:text-gray-200">更新日</span>
                         </div>
                     </td>
                     <td class="h-px w-auto whitespace-nowrap">
                         <div class="px-6 py-2">
-                            <span class="font-semibold text-sm text-gray-800 dark:text-gray-200">{{ $situation->created_at }}</span>
+                            <span class="font-semibold text-sm text-gray-800 dark:text-gray-200">{{ $situation->updated_at }}</span>
                         </div>
                     </td>
                 </tr>
